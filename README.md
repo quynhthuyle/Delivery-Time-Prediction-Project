@@ -1,4 +1,5 @@
 Mô tả dự án
+
 Dự án này tập trung vào việc dự đoán thời gian giao hàng (Delivery Time Prediction) trong lĩnh vực giao đồ ăn bằng cách áp dụng các kỹ thuật Machine Learning. Mục tiêu chính là xây dựng một hệ thống có khả năng ước lượng chính xác ETA – Estimated Time of Arrival, giúp tối ưu hóa quy trình vận hành logistics và mang lại trải nghiệm tốt hơn cho khách hàng.
 
 Quy trình thực hiện dự án bao gồm nhiều giai đoạn:
