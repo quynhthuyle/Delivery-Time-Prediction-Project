@@ -1,0 +1,1 @@
+This project aims to predict food delivery times using machine learning. It includes data preprocessing, clustering, and regression models to estimate accurate ETAs. Cleaned datasets and trained models are stored for reuse, while a dashboard visualizes performance. The goal is to optimize logistics operations and enhance customer satisfaction.
