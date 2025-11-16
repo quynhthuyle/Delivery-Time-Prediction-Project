@@ -1,12 +1,26 @@
-Mô tả dự án
+🚚 Delivery Time Prediction System
 
-Dự án này tập trung vào việc dự đoán thời gian giao hàng (Delivery Time Prediction) trong lĩnh vực giao đồ ăn bằng cách áp dụng các kỹ thuật Machine Learning. Mục tiêu chính là xây dựng một hệ thống có khả năng ước lượng chính xác ETA – Estimated Time of Arrival, giúp tối ưu hóa quy trình vận hành logistics và mang lại trải nghiệm tốt hơn cho khách hàng.
+This project focuses on predicting delivery time (ETA – Estimated Time of Arrival) in the food delivery industry using Machine Learning. The main goal is to build a system capable of accurately estimating delivery times to optimize logistics operations and enhance customer experience.
 
-Quy trình thực hiện dự án bao gồm nhiều giai đoạn:
-- Tiền xử lý dữ liệu (Data Preprocessing): Làm sạch và chuẩn hóa dữ liệu từ tập Food Delivery Dataset, loại bỏ giá trị nhiễu, chuẩn hóa định dạng thời gian, đồng thời xây dựng các đặc trưng (features) quan trọng cho mô hình.
-- Phân cụm dữ liệu (Clustering): Sử dụng các thuật toán như K-Means để nhóm các đơn hàng hoặc khách hàng theo đặc điểm giống nhau, từ đó hỗ trợ việc huấn luyện mô hình dự đoán.
-- Xây dựng mô hình dự đoán (Prediction Models): Triển khai các thuật toán hồi quy (Regression Models) để ước lượng thời gian giao hàng dựa trên nhiều yếu tố: khoảng cách, điều kiện giao thông, đặc điểm khách hàng và tài xế giao hàng.
-- Lưu trữ và tái sử dụng mô hình: Các mô hình và bộ biến đổi (scaler) đã được huấn luyện được lưu dưới dạng file .pkl, giúp dễ dàng triển khai và sử dụng lại trong các lần dự đoán sau.
-- Trực quan hóa kết quả (Dashboard): Một dashboard được thiết kế nhằm trực quan hóa hiệu suất của mô hình, so sánh thời gian dự đoán với thực tế, và cung cấp các chỉ số đánh giá để dễ dàng theo dõi.
+🔍 Features
 
-Thông qua dự án, nhóm mong muốn mang lại giải pháp hỗ trợ cho doanh nghiệp trong việc giảm tỷ lệ giao hàng trễ, tối ưu chi phí vận hành, nâng cao hiệu quả quản lý đội ngũ shipper, đồng thời tăng mức độ hài lòng của khách hàng trong bối cảnh thương mại điện tử và dịch vụ giao nhận ngày càng phát triển.
+🧹 Data Preprocessing: Cleans and standardizes the Food Delivery Dataset, removes noise, normalizes time formats, and engineers key features for model training.
+📊 Clustering Analysis: Uses algorithms like K-Means to segment orders or customers based on similar characteristics, improving the predictive model’s performance.
+🤖 Prediction Models: Implements regression-based Machine Learning models to estimate delivery time using factors such as distance, traffic conditions, customer attributes, and driver characteristics.
+💾 Model Storage & Reusability: Trained models and scalers are stored as .pkl files for easy deployment and reuse.
+📈 Performance Dashboard: A comprehensive dashboard visualizes model accuracy, compares predicted vs. actual delivery times, and displays key performance metrics for monitoring.
+
+🛠 Tech Stack
+
+Python (Pandas, NumPy, Scikit-learn)
+
+Machine Learning (Linear Regression, Random Forest, Feature Engineering)
+
+Clustering (K-Means)
+
+Data Visualization (Use Power BI to visulize) -> Xem dashboard [Tại đây](https://app.powerbi.com/groups/me/reports/9d42876f-00a8-4007-a689-8adac0b61b03?ctid=5b98a1d4-abc3-42cd-896e-2e1b240dc662&pbi_source=linkShare&bookmarkGuid=f564909f-b69a-4940-a7ae-123252a70220)
+
+
+🌟 Project Impact
+
+This project aims to support businesses in reducing late deliveries, optimizing operational costs, improving fleet management efficiency, and enhancing customer satisfaction — especially in the rapidly growing food delivery and e-commerce market.
