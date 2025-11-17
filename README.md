@@ -2,6 +2,10 @@
 
 This project focuses on predicting delivery time (ETA – Estimated Time of Arrival) in the food delivery industry using Machine Learning. The main goal is to build a system capable of accurately estimating delivery times to optimize logistics operations and enhance customer experience.
 
+📦 Dataset
+
+This project uses a public Food Delivery Dataset from Kaggle. Food delivery involves restaurants or delivery services bringing food or groceries to customers via cars, bikes, or scooters. Because delivery speed directly affects customer satisfaction, the dataset includes key factors such as order details, preparation time, distance, rider info, and customer attributes — providing a solid base for accurate ETA prediction.
+
 🔍 Features
 -  🧹 Data Preprocessing: Cleans and standardizes the Food Delivery Dataset, removes noise, normalizes time formats, and engineers key features for model training.
 -  📊 Clustering Analysis: Uses algorithms like K-Means to segment orders or customers based on similar characteristics, improving the predictive model’s performance.
