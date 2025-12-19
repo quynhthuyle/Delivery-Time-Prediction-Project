@@ -29,9 +29,11 @@ This project uses a public **Food Delivery Dataset** from Kaggle (45,000+ record
 - **Interactive Dashboard**: Developed a Power BI report to track fleet performance and delivery bottlenecks.
 -> View dashboard: [Tại đây](https://app.powerbi.com/groups/me/reports/9d42876f-00a8-4007-a689-8adac0b61b03?ctid=5b98a1d4-abc3-42cd-896e-2e1b240dc662&pbi_source=linkShare&bookmarkGuid=f564909f-b69a-4940-a7ae-123252a70220)
 
-- **Web Application**: Built a  ETA calculator using Streamlit, allowing users to input order details and receive instant predictions.
+- **Interactive Deployment**: Streamlit Web App To demonstrate the model's practical utility, I developed a web-based simulation tool using Streamlit:
+  + **Dynamic ETA Calculator**: Provides a user-friendly interface where coordinators can input order details (distance, weather, traffic) to receive instant delivery time estimates.
+ + **Model-in-the-Loop**: Seamlessly integrates a pre-trained **XGBoost pipeline** to show how real-world variables impact logistics performance.
  
 # **🌟 Key outcomes**
 - **High-Precision ETA**: Delivered a robust **XGBoost engine** with **68% variance explanation (R²)**, reducing delivery uncertainty for customers.
 - **Operational Intelligence**: Provided actionable segmentation of **45,000+ drivers**, identifying a 20% performance gap between top and bottom tiers.
-- **Real-time Deployment**: Successfully integrated insights into an interactive **Power BI dashboard** and a **Streamlit web app** for immediate business use.
+- **Business Integration:** Successfully bridged the gap between raw data and decision-making by deploying interactive visualization via **Power BI** and **Streamlit**.
