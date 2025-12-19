@@ -1,24 +1,37 @@
 # **🚚 Delivery Time Prediction System**
 
-This project focuses on predicting delivery time (ETA – Estimated Time of Arrival) in the food delivery industry using Machine Learning. The main goal is to build a system capable of accurately estimating delivery times to optimize logistics operations and enhance customer experience.
+This project addresses two core challenges in the food delivery industry: **Estimated Time of Arrival (ETA)** prediction and **Driver Performance Analysis**. By accurately predicting delivery times and segmenting the driver fleet, businesses can optimize logistics, improve customer transparency, and implement targeted driver management strategies.
 
 # **📦 Dataset**
 
-This project uses a public Food Delivery Dataset from Kaggle. Food delivery involves restaurants or delivery services bringing food or groceries to customers via cars, bikes, or scooters. Because delivery speed directly affects customer satisfaction, the dataset includes key factors such as order details, preparation time, distance, rider info, and customer attributes — providing a solid base for accurate ETA prediction.
+This project uses a public **Food Delivery Dataset** from Kaggle (45,000+ records) featuring:
+- **Order Attributes**: Order time, food type, weather conditions, and road traffic density.
+- **Geospatial Data**: Restaurant and delivery coordinates (utilized for Haversine distance calculations).
+- **Driver Profiles**: Age and historical performance ratings.
 
-# **🔍 Features**
--  🧹 Data Preprocessing: Cleans and standardizes the Food Delivery Dataset, removes noise, normalizes time formats, and engineers key features for model training.
--  📊 Clustering Analysis: Uses algorithms like K-Means to segment orders or customers based on similar characteristics, improving the predictive model’s performance.
--  🤖 Prediction Models: Implements regression-based Machine Learning models to estimate delivery time using factors such as distance, traffic conditions, customer attributes, and driver characteristics.
--  💾 Model Storage & Reusability: Trained models and scalers are stored as .pkl files for easy deployment and reuse.
--  📈 Performance Dashboard: A comprehensive dashboard visualizes model accuracy, compares predicted vs. actual delivery times, and displays key performance metrics for monitoring.
+# **🛠 Technical Workflow**
+**1. Data Engineering & Preprocessing**
+- **Feature Extraction**: Calculated Haversine distance from GPS coordinates to determine the actual travel path.
+- **Temporal Engineering**: Derived "Hour of Day," "Day of Week," and "Is Weekend" features to capture peak-hour traffic patterns.
+- **Data Cleaning**: Handled missing values and standardized weather/traffic categories for model compatibility.
 
+**2. Predictive Modeling (Regression)**
+- **Algorithms**: Benchmarked multiple regressors including **Linear Regression, Decision Tree, and Random Forest**, selecting **XGBoost** as the champion model for its superior handling of non-linear logistics data.
+- **Optimization**: Fine-tuned hyperparameters and utilized **StandardScaler** to minimize **MSE**, ensuring the model generalizes well to unseen delivery scenarios.
+- **Performance**: The final XGBoost model achieved an **R² score of 0.68**, providing robust ETA estimates even under volatile weather conditions.
 
-# **🛠 Tech Stack**
--  Python (Pandas, NumPy, Scikit-learn)
--  Machine Learning (Linear Regression, Random Forest, Feature Engineering)
--  Clustering (K-Means)
--  Data Visualization (Use Power BI to visulize) -> Xem dashboard: [Tại đây](https://app.powerbi.com/groups/me/reports/9d42876f-00a8-4007-a689-8adac0b61b03?ctid=5b98a1d4-abc3-42cd-896e-2e1b240dc662&pbi_source=linkShare&bookmarkGuid=f564909f-b69a-4940-a7ae-123252a70220)
--  
-# **🌟 Project Impact**
-This project aims to support businesses in reducing late deliveries, optimizing operational costs, improving fleet management efficiency, and enhancing customer satisfaction — especially in the rapidly growing food delivery and e-commerce market.
+**3. Driver Segmentation (Unsupervised Learning)**
+- **Approach**: Applied **K-Means Clustering** to categorize drivers based on age, ratings, and delivery speed.
+- **Validation**: Used the **Elbow Method and Silhouette Analysis** to determine the optimal number of clusters (**k=5**).
+- **Insights**: Discovered a **"High-Efficiency" cluster (Cluster 2)** and an **"Underperforming" cluster (Cluster 1)**, enabling data-driven decisions for targeted driver training and incentive reallocation.
+
+**4. Deployment & Visualization**
+- **Interactive Dashboard**: Developed a Power BI report to track fleet performance and delivery bottlenecks.
+-> View dashboard: [Tại đây](https://app.powerbi.com/groups/me/reports/9d42876f-00a8-4007-a689-8adac0b61b03?ctid=5b98a1d4-abc3-42cd-896e-2e1b240dc662&pbi_source=linkShare&bookmarkGuid=f564909f-b69a-4940-a7ae-123252a70220)
+
+- **Web Application**: Built a  ETA calculator using Streamlit, allowing users to input order details and receive instant predictions.
+ 
+# **🌟 Key outcomes**
+- **High-Precision ETA**: Delivered a robust **XGBoost engine** with **68% variance explanation (R²)**, reducing delivery uncertainty for customers.
+- **Operational Intelligence**: Provided actionable segmentation of **45,000+ drivers**, identifying a 20% performance gap between top and bottom tiers.
+- **Real-time Deployment**: Successfully integrated insights into an interactive **Power BI dashboard** and a **Streamlit web app** for immediate business use.
