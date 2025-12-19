@@ -31,7 +31,7 @@ This project uses a public **Food Delivery Dataset** from Kaggle (45,000+ record
 
 - **Interactive Deployment**: Streamlit Web App To demonstrate the model's practical utility, I developed a web-based simulation tool using Streamlit:
   + **Dynamic ETA Calculator**: Provides a user-friendly interface where coordinators can input order details (distance, weather, traffic) to receive instant delivery time estimates.
- + **Model-in-the-Loop**: Seamlessly integrates a pre-trained **XGBoost pipeline** to show how real-world variables impact logistics performance.
+  + **Model-in-the-Loop**: Seamlessly integrates a pre-trained **XGBoost pipeline** to show how real-world variables impact logistics performance.
  
 # **🌟 Key outcomes**
 - **High-Precision ETA**: Delivered a robust **XGBoost engine** with **68% variance explanation (R²)**, reducing delivery uncertainty for customers.
